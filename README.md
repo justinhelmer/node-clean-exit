@@ -19,6 +19,12 @@ phantom_process.js      22401 justin  345u     REG                1,2      3072 
 
 Intended only for very basic use cases; the goal is to keep it simple.
 
+## Installation
+
+```bash
+$ npm install --save node-clean-exit
+```
+
 ## Usage
 
 At the **bottom** of your node script, add:
