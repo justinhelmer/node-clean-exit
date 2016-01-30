@@ -37,9 +37,9 @@ Options can be passed as well, using:
 require('node-clean-exit')(options);
 ```
 
-- quiet - Suppress all error output. Defaults to false.
-- verbose - Can be a boolean or a number. The higher the number, the higher the verbosity.
-- children - An array of `node` [child processes](https://nodejs.org/api/child_process.html) to be killed on exit.
+- `quiet` _{boolean}_ - Suppress all output. Defaults to `false`.
+- `verbose` _{mixed}_ - Can be a boolean or a number. The higher the number, the higher the verbosity. Defaults to `false`.
+- `children` - An array of `node` [child processes](https://nodejs.org/api/child_process.html) to be killed on exit.
 
 ## Contributing
 
