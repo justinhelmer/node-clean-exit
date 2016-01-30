@@ -47,7 +47,7 @@ require('node-clean-exit')(options);
 - `verbose` _{mixed}_ - Can be a boolean or a number. The higher the number, the higher the verbosity. Defaults to `false`.
 - `children` _{array}_ - List of `node` [child processes](https://nodejs.org/api/child_process.html) to be killed on exit.
 
-> For creating & managing reliable `child processes` with ease, try [spork](https://github.com/justinhelmer/node-spork),
+> For creating & managing reliable `child processes` with ease, try [spork](https://github.com/justinhelmer/node-spork).
 
 ## Contributing
 
