@@ -1,0 +1,37 @@
+{
+  "name": "node-clean-exit",
+  "version": "0.1.0",
+  "description": "A small module for exiting a node process cleanly, with ease.",
+  "keywords": [
+    "exit",
+    "node",
+    "child",
+    "process",
+    "spawn",
+    "fork"
+  ],
+  "homepage": "https://github.com/justinhelmer/node-clean-exit",
+  "bugs": {
+    "url": "https://github.com/justinhelmer/node-clean-exit/issues",
+    "email": "jhelmer25@gmail.com"
+  },
+  "licence": "MIT",
+  "author": "Justin Helmer jhelmer25@gmail.com",
+  "files": [
+    "lib"
+  ],
+  "main": "./lib/exit.js",
+  "repository": "justinhelmer/node-clean-exit",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "lodash": "^4.0.1",
+    "pluralize": "^1.2.1"
+  },
+  "devDendencies": {
+    "jscs": "^2.9.0",
+    "jshint": "^2.9.1"
+  },
+  "engines": {
+    "node": ">=0.12"
+  }
+}
