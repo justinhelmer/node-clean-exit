@@ -1,6 +1,6 @@
 {
   "name": "node-clean-exit",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A small module for exiting a node process cleanly, with ease.",
   "keywords": [
     "exit",
@@ -17,10 +17,7 @@
   },
   "license": "MIT",
   "author": "Justin Helmer jhelmer25@gmail.com",
-  "files": [
-    "lib"
-  ],
-  "main": "./lib/exit.js",
+  "main": "./index.js",
   "repository": "justinhelmer/node-clean-exit",
   "dependencies": {
     "chalk": "^1.1.1",
