@@ -35,6 +35,8 @@ require('node-clean-exit')();
 
 That's it! Your script now captures `SIGINT` and `UncaughtException` errors, outputs the stack trace, and exits cleanly.
 
+> For tight integration and easy `child process` spawning, try [spork](https://github.com/justinhelmer/node-spork).
+
 ## Options
 
 Options can be passed as well, using:
@@ -43,11 +45,9 @@ Options can be passed as well, using:
 require('node-clean-exit')(options);
 ```
 
-- `quiet` _{boolean}_ - Suppress all output. Defaults to `false`.
-- `verbose` _{mixed}_ - Can be a boolean or a number. The higher the number, the higher the verbosity. Defaults to `false`.
-- `children` _{array}_ - List of `node` [child processes](https://nodejs.org/api/child_process.html) to be killed on exit.
-
-> For creating & managing reliable `child processes` with ease, try [spork](https://github.com/justinhelmer/node-spork).
+- **children** _{array}_ - List of [spork](https://github.com/justinhelmer/node-spork) or [forever-monitor](https://github.com/foreverjs/forever-monitor) `child processes` to be killed on exit.
+- **stdio** _{array}_ - Identify whether or not to pipe STDIN, STDOUT, STDERR to the parent process. Defaults to `['inherit', 'inherit', 'inherit']`.
+- **verbose** _{mixed}_ - Output more. Can be a boolean or a number. The higher the number, the higher the verbosity. Defaults to `false`.
 
 ## Contributing
 

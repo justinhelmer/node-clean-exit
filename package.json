@@ -1,6 +1,6 @@
 {
   "name": "node-clean-exit",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A small module for exiting a node process cleanly, with ease.",
   "keywords": [
     "exit",

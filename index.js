@@ -5,6 +5,15 @@
   var chalk = require('chalk');
   var pluralize = require('pluralize');
 
+  /**
+   * Exit a node script cleanly, including child processes.
+   *
+   * @param {object} [options] - Additional options to modify the behavior of exit().
+   * @param {array} [options.children] - List of spork or forever-monitor child processes to be killed on exit.
+   * @param {boolean} [options.quiet=false] - Output nothing (suppress STDOUT and STDERR)').
+   * @param {mixed} [options.verbose=false] - Output more. Can be a boolean or a number. The higher the number, the higher the verbosity.
+   * @see https://github.com/justinhelmer/node-spork
+   */
   function exit(options) {
     options = options || {};
     process.stdin.resume();
@@ -23,6 +32,9 @@
         if (options.verbose) {
           console.log('Killing', chalk.bold.blue(options.children.length + ''), 'background', pluralize('process', options.children.length), '...');
         }
+
+        // suppress errors that may come up for children that are already killed
+        process.stdout.write = _.noop;
 
         _.each(options.children, function(child) {
           if (_.isFunction(_.get(child, 'kill'))) {
